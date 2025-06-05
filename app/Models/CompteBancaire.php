@@ -8,17 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class CompteBancaire extends Model
 {
     use HasFactory;
-         protected $fillable = [
-        'numero_compte',
-        'solde',
-        'solde_min',
-        'status',
-        'type',
-        'taux_epargne',
-        'frais_tenu_compte',
-        'client_id'
-        
-    ];
+        protected $fillable = [
+    'numero_compte',
+    'solde',
+    'solde_min',
+    'status',
+    'type',
+    'taux_epargne',
+    'frais_tenu_compte',
+    'client_id',
+    'archived' // ajouter ceci
+];
+
 
     public function operation()
 {

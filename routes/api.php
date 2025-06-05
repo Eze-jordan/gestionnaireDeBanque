@@ -36,7 +36,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/clients/{id}', [ClientController::class, 'update']);
     Route::delete('/clients/{id}', [ClientController::class, 'destroy']);
 
+    Route::get('/comptes', [CompteBancaireController::class, 'index']);
     Route::post('/comptes', [CompteBancaireController::class, 'store']);
+    Route::get('/comptes/{id}', [CompteBancaireController::class, 'show']);
+    Route::put('/comptes/{id}', [CompteBancaireController::class, 'update']);
+    Route::delete('/comptes/{id}', [CompteBancaireController::class, 'destroy']);
+
 });
 
 
